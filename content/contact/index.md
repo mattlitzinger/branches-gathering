@@ -2,7 +2,7 @@
 layout: layouts/base.njk
 eleventyNavigation:
   key: Contact
-  order: 3
+  order: 4
 ---
 # Contact Us
 

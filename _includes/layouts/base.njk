@@ -1,3 +1,6 @@
+---
+data: schedule
+---
 <!doctype html>
 <html lang="{{ metadata.language }}">
 	<head>
@@ -37,9 +40,12 @@
 		<a href="#skip" class="visually-hidden">Skip to main content</a>
 
 		<header>
-			<a href="/" class="home-link">
+			<!-- <a href="/" class="home-link">
 				<div class="site-title">{{ metadata.title }}</div>
 				<div class="site-description">{{ metadata.description }}</div>
+			</a> -->
+			<a href="/" class="site-logo">
+				<img src="/img/branches-with-circle.webp" alt="Branches logo" />
 			</a>
 
 			{#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
@@ -49,7 +55,6 @@
 					{%- for entry in collections.all | eleventyNavigation %}
 						<li class="nav-item"><a href="{{ entry.url }}"{% if entry.url == page.url %} aria-current="page"{% endif %}>{{ entry.title }}</a></li>
 					{%- endfor %}
-					<li class="nav-item"><a href="https://ko-fi.com/" target="_blank" rel="noopener">Donate</a></li>
 				</ul>
 			</nav>
 		</header>
@@ -58,7 +63,13 @@
 			{{ content | safe }}
 		</main>
 
-		<footer></footer>
+		<footer>
+			<a href="/" class="home-link">
+				<div class="site-title">{{ metadata.title }}</div>
+				<div class="site-description">{{ metadata.description }}</div>
+			</a>
+			<div class="text-sm">Site by <a href="https://litzdigital.com" target="_blank">Litz Digital</a></div>
+		</footer>
 
 		<!-- Current page: {{ page.url | htmlBaseUrl }} -->
 	</body>

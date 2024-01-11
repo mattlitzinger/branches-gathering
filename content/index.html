@@ -7,48 +7,45 @@ numberOfLatestPostsToShow: 3
 ---
 <img src="/img/birch-trees.jpg" alt="Birch trees in a forest" />
 
-<h1>Branches Conference 2024</h1>
+<h1>Welcome to Branches</h1>
+<p class="text-xl">A Gathering of Christian Creatives in Southern New Hampshire</p>
 
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consectetur porttitor ornare. Donec pulvinar neque sed mauris tristique, ut condimentum turpis consequat. Morbi condimentum, metus eget rhoncus interdum, erat ipsum porta enim, vitae eleifend nulla lacus sed turpis. Maecenas quis orci lorem. Aenean rhoncus venenatis pharetra. Morbi et ultrices justo, eu sodales diam. Nullam et ex massa. Maecenas euismod tempor arcu, vitae venenatis enim dictum eget. In dictum iaculis lectus sit amet commodo.</p>
+<p class="text-lg">We are a local group of New England creatives who passionately believe that each person has been made in the image of God, and as part of that image-bearing we are created to create.</p>
 
-<p><strong>February 24, 2024</p>
+<p>We hope that the pieces we make (whether they are visual art, music, writing, etc.) are a call to our neighbors next door, across the fence and down the lane, our companions on this journey through life.</p>
 
-<p><strong><a href="#register">Register Today!</a></strong></p>
+<p>A call to remember our Creator as we live out our lives in the  intermediate space between the Garden and the Restoration. As we wrestle with the fallenness of our world (the tensions of joy and sorrow, peace and suffering, being present while we look to the future), we believe that the arts can be a means that God uses to minister to our hearts and give us strength, courage and community.</p>
 
-<h2>Schedule</h2>
-
-<h2>FAQs</h2>
+<h2>Join Us For Branches 2024</h2>
+<p>We invite you to join us on <strong>Saturday, February 24th, 2024</strong> for a day of worship, general gatherings and area-focused sessions as we seek to:</p>
 
 <ul>
-	<li>Who is Branches Conference for?</li>
-	<li>What should I bring to the conference?</li>
-	<li>Where is the conference located?</li>
+	<li>Use our creative gifting to call our world to remember our roots</li>
+	<li>Encourage one another to be ever learning and growing in our creative fields</li>
+	<li>Find camaraderie and a <a href="https://www.goodreads.com/quotes/10554-friendship-is-born-at-the-moment-when-one-man" target="_blank">“What? You too?”</a> in pursuits that can at times give way to a feeling of aloneness</li>
+	<li>Worship our Creator together</li>
 </ul>
 
-<h2 id="register">Register</h2>
+<div class="btn-wrapper">
+	<a class="btn btn-primary" href="https://branches.ticketleap.com/2024-gathering/" target="_blank">Register Today!</a>
+</div>
 
-<a href="https://branches.ticketleap.com/2024-gathering/" target="_blank">Register Now</a>
+<h2>Why “Branches”?</h2>
 
-{#
-{% set postsCount = collections.posts | length %}
-{% set latestPostsCount = postsCount | min(numberOfLatestPostsToShow) %}
-<h1>Latest Update{% if latestPostsCount != 1 %}s{% endif %}</h1>
+<p>Our theme verse for our day is John 15:4:</p>
+<p class="text-lg">"Abide in me (Jesus), and I in you. As the branch cannot bear fruit by itself, unless it abides in the vine, neither can you, unless you abide in me." (ESV)</p>
 
-{% set postslist = collections.posts | head(-1 * numberOfLatestPostsToShow) %}
-{% set postslistCounter = postsCount %}
-{% include "postslist.njk" %}
-
-{% set morePosts = postsCount - numberOfLatestPostsToShow %}
-{% if morePosts > 0 %}
-<p>{{ morePosts }} more post{% if morePosts != 1 %}s{% endif %} can be found in <a href="/blog/">the archive</a>.</p>
-{% endif %}
-#}
-
-{# List every content page in the project #}
-{#
+<p>The visual of branches reminds us:</p>
 <ul>
-	{%- for entry in collections.all %}
-	<li><a href="{{ entry.url }}"><code>{{ entry.url }}</code></a></li>
-	{%- endfor %}
+	<li>We were made to bear fruit. Let’s use the gifts God has given us to do what He’s calling us to do.</li>
+	<li>Our fruit comes from abiding in Jesus. He is our source of creativity.</li>
+	<li>We have roots and don’t have to change with the wind.</li>
 </ul>
-#}
+
+<p class="text-lg">And so we ask ourselves the question…”How am I branching out?”</p>
+
+<div class="btn-wrapper">
+	<a class="btn btn-primary" href="https://branches.ticketleap.com/2024-gathering/" target="_blank">Register Today!</a>
+	<a class="btn btn-secondary" href="/schedule/">View Schedule</a>
+</div>
+
