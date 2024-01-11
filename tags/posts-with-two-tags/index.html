@@ -17,38 +17,32 @@
 }
 
 /* Theme colors */
+
 :root {
+	--color-green-50: #6B7358;
+	--color-green-70: #49503C;
+
+	--color-white: #ffffff;
+	--color-gray-10: #F5F5F5;
 	--color-gray-20: #e0e0e0;
 	--color-gray-50: #C0C0C0;
+	--color-gray-70: #757575;
 	--color-gray-90: #333;
 
-	--background-color: #fff;
+	--background-color: var(--color-white);
 
 	--text-color: var(--color-gray-90);
-	--text-color-link: #082840;
-	--text-color-link-active: #5f2b48;
-	--text-color-link-visited: #17050F;
+	--text-color-link: var(--color-green-50);
+	--text-color-link-active: var(--color-green-70);
+	--text-color-link-visited: var(--color-green-70);
+
+	--content-width: 50rem;
 
 	--syntax-tab-size: 2;
 }
 
-@media (prefers-color-scheme: dark) {
-	:root {
-		--color-gray-20: #e0e0e0;
-		--color-gray-50: #C0C0C0;
-		--color-gray-90: #dad8d8;
-
-		/* --text-color is assigned to --color-gray-_ above */
-		--text-color-link: #1493fb;
-		--text-color-link-active: #6969f7;
-		--text-color-link-visited: #a6a6f8;
-
-		--background-color: #15202b;
-	}
-}
-
-
 /* Global stylesheet */
+
 * {
 	box-sizing: border-box;
 }
@@ -65,7 +59,7 @@ html {
 	overflow-y: scroll;
 }
 body {
-	max-width: 48rem;
+	max-width: var(--content-width);
 }
 
 /* https://www.a11yproject.com/posts/how-to-hide-content/ */
@@ -93,13 +87,30 @@ li {
 a[href] {
 	color: var(--text-color-link);
 }
-a[href]:visited {
-	color: var(--text-color-link-visited);
-}
 a[href]:hover,
-a[href]:active {
+a[href]:focus {
 	color: var(--text-color-link-active);
 }
+
+/* Helpers */
+
+.text-sm {
+	font-size: 0.8rem;
+}
+
+.text-md {
+	font-size: 1rem;
+}
+
+.text-lg {
+	font-size: 1.2rem;
+}
+
+.text-xl {
+	font-size: 1.4rem;
+}
+
+/* Main */
 
 main {
 	padding: 1rem;
@@ -121,14 +132,6 @@ header:after {
 	list-style: none;
 	border-top: 1px dashed var(--color-gray-20);
 	padding: 1rem 0;
-}
-
-table {
-	margin: 1rem 0;
-}
-table td,
-table th {
-	padding-right: 1rem;
 }
 
 pre,
@@ -160,12 +163,68 @@ img {
 }
 
 /* Header */
+
 header {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
-	align-items: flex-end;
+	align-items: center;
 	padding: 1rem;
+}
+a.site-logo img {
+  /*filter: grayscale(1);
+  opacity: 1;*/
+  width: 136px;
+  /*transition: filter 200ms linear,
+  						opacity 200ms linear;*/
+}
+
+/*a.site-logo:hover img,
+a.site-logo:focus img {
+  filter: grayscale(1);
+  opacity: 0.8;
+}*/
+
+/* Nav */
+
+.nav {
+	margin-left: auto;
+}
+.nav ul {
+	display: flex;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+.nav-item {
+	display: inline-block;
+	margin-right: 1.5rem;
+}
+.nav-item:last-of-type {
+	margin-right: 0;
+}
+.nav-item a[href]:not(:hover) {
+	text-decoration: none;
+}
+.nav a[href][aria-current="page"] {
+	text-decoration: underline;
+}
+
+/* Footer */
+
+footer {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	padding: 6rem 1rem 2rem;
+	color: var(--color-gray-70);
+}
+footer a[href] {
+	color: var(--color-gray-70);
+}
+footer a[href]:hover,
+footer a[href]:focus {
+	color: var(--color-green-70);
 }
 .home-link {
 	margin-right: 2em;
@@ -179,35 +238,12 @@ header {
 }
 .home-link .site-description {
 	margin-top: 0.25rem;
-	font-size: 0.8125rem; /* 13px /16 */
+	font-size: 0.8rem; /* 13px /16 */
 	font-style: italic;
 }
 
-/* Nav */
-.nav {
-	margin-left: auto;
-}
-.nav ul {
-	display: flex;
-	padding: 0;
-	margin: 0;
-	list-style: none;
-}
-.nav-item {
-	display: inline-block;
-	margin-right: 1rem;
-}
-.nav-item:last-of-type {
-	margin-right: 0;
-}
-.nav-item a[href]:not(:hover) {
-	text-decoration: none;
-}
-.nav a[href][aria-current="page"] {
-	text-decoration: underline;
-}
-
 /* Posts list */
+
 .postlist {
 	list-style: none;
 	padding: 0;
@@ -251,6 +287,7 @@ header {
 }
 
 /* Tags */
+
 .post-tag {
 	display: inline-flex;
 	align-items: center;
@@ -263,6 +300,7 @@ header {
 }
 
 /* Tags list */
+
 .post-metadata {
 	display: inline-flex;
 	flex-wrap: wrap;
@@ -276,6 +314,7 @@ header {
 }
 
 /* Direct Links / Markdown Headers */
+
 .header-anchor {
 	text-decoration: none;
 	font-style: normal;
@@ -297,23 +336,96 @@ a[href].header-anchor:focus,
 
 h2 + .header-anchor {
 	font-size: 1.5rem;
+}
+
+/* Buttons */
+.btn-wrapper {
+	display: flex;
+	gap: 0.75rem;
+	margin: 1.5rem 0;
+}
+.btn,
+a[href].btn {
+	display: inline-block;
+	padding: 8px 20px;
+	border: none;
+	border-radius: 8px;
+	font-weight: 600;
+	text-decoration: none;
+	transition: background-color 200ms linear,
+							color 200ms linear;
+}
+.btn-primary,
+a[href].btn-primary {
+	background-color: var(--color-green-50);
+	color: var(--color-white);
+}
+.btn-primary:hover,
+.btn-primary:focus,
+a[href].btn-primary:hover,
+a[href].btn-primary:focus {
+	background-color: var(--color-green-70);
+	color: var(--color-white);
+}
+.btn-secondary,
+a[href].btn-secondary {
+	background-color: var(--color-gray-10);
+	color: var(--color-green-50);
+}
+.btn-secondary:hover,
+.btn-secondary:focus,
+a[href].btn-secondary:hover,
+a[href].btn-secondary:focus {
+	background-color: var(--color-gray-20);
+	color: var(--color-green-70);
+}
+
+/* Tables */
+caption {
+  text-align: left;
+}
+table {
+	width: 100%;
+	margin: 1rem 0;
+	text-align: left;
+  color: var(--color-gray-90);
+  background: var(--color-white);
+  border: 1px solid var(--color-gray-50);
+  border-collapse: collapse;
+/*  width: fit-content;*/
+}
+table thead th,
+table tfoot th {
+  color: var(--color-white);
+  background: var(--color-green-50);
+}
+table caption {
+  padding: 0.5rem;
+}
+table th,
+table td {
+  padding: 14px;
+  border: 1px solid var(--color-gray-20);
 }</style>
 	</head>
 	<body>
 		<a href="#skip" class="visually-hidden">Skip to main content</a>
 
 		<header>
-			<a href="/" class="home-link">
+			<!-- <a href="/" class="home-link">
 				<div class="site-title">Branches</div>
 				<div class="site-description">A local gathering of Christian creatives.</div>
+			</a> -->
+			<a href="/" class="site-logo">
+				<img src="/img/branches-with-circle.webp" alt="Branches logo" />
 			</a>
 			<nav class="nav">
 				<h2 class="visually-hidden">Top level navigation menu</h2>
 				<ul>
 						<li class="nav-item"><a href="/">Home</a></li>
 						<li class="nav-item"><a href="/schedule/">Schedule</a></li>
+						<li class="nav-item"><a href="/faqs/">FAQs</a></li>
 						<li class="nav-item"><a href="/contact/">Contact</a></li>
-					<li class="nav-item"><a href="https://ko-fi.com/" target="_blank" rel="noopener">Donate</a></li>
 				</ul>
 			</nav>
 		</header>
@@ -339,7 +451,13 @@ h2 + .header-anchor {
 
 		</main>
 
-		<footer></footer>
+		<footer>
+			<a href="/" class="home-link">
+				<div class="site-title">Branches</div>
+				<div class="site-description">A local gathering of Christian creatives.</div>
+			</a>
+			<div class="text-sm">Site by <a href="https://litzdigital.com" target="_blank">Litz Digital</a></div>
+		</footer>
 
 		<!-- Current page: /tags/posts-with-two-tags/ -->
 	</body>
