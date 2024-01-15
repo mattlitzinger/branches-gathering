@@ -9,6 +9,21 @@ data: schedule
 		<title>{{ title or metadata.title }}</title>
 		<meta name="description" content="{{ description or metadata.description }}">
 
+		<!-- Facebook Meta Tags -->
+		<meta property="og:url" content="https://branchesgathering.com/">
+		<meta property="og:type" content="website">
+		<meta property="og:title" content="{{ metadata.title }}">
+		<meta property="og:description" content="{{ metadata.description }}">
+		<meta property="og:image" content="https://branchesgathering.com/img/branches-home-hero.jpg">
+
+		<!-- Twitter Meta Tags -->
+		<meta name="twitter:card" content="summary_large_image">
+		<meta property="twitter:domain" content="branchesgathering.com">
+		<meta property="twitter:url" content="https://branchesgathering.com/">
+		<meta name="twitter:title" content="{{ metadata.title }}">
+		<meta name="twitter:description" content="{{ metadata.description }}">
+		<meta name="twitter:image" content="https://branchesgathering.com/img/branches-home-hero.jpg">
+
 		{#- Atom and JSON feeds included by default #}
 		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="{{ metadata.title }}">
 		<link rel="alternate" href="/feed/feed.json" type="application/json" title="{{ metadata.title }}">
