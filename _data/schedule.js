@@ -8,7 +8,7 @@ module.exports = {
 		},
 		{
 			time: "9:00-9:30",  
-		  title: "Worship & Devotional ",
+		  title: "Worship & Devotional",
 		  description: ""
 		},
 		{
@@ -23,7 +23,7 @@ module.exports = {
 		},
 		{
 			time: "10:15-11:00",  
-		  title: "Breakout Session ",
+		  title: "Breakout Session",
 		  description: ""
 		},
 		{
@@ -33,7 +33,7 @@ module.exports = {
 		},
 		{
 			time: "11:15-12:00",  
-		  title: "Breakout Session with a really really long discription about the thing",
+		  title: "Breakout Session",
 		  description: ""
 		},
 		{
@@ -43,7 +43,7 @@ module.exports = {
 		},
 		{
 			time: "01:00-01:15",  
-		  title: "Worship ",
+		  title: "Worship",
 		  description: ""
 		},
 		{
