@@ -106,6 +106,12 @@ a[href]:focus {
 	margin-bottom: 0 !important;
 }
 
+.flexbox {
+	display: flex;
+	align-items: flex-start;
+	gap: 1.5rem;
+}
+
 /* Main */
 
 main {
