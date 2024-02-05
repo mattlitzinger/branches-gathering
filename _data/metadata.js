@@ -2,7 +2,7 @@ module.exports = {
 	title: "Branches",
 	url: "https://branchesgathering.com/",
 	language: "en",
-	description: "A local gathering of Christian creatives.",
+	description: "A gathering of Christian creatives in Southern New Hampshire",
 	author: {
 		name: "Matt Litzinger",
 		email: "matt@litzdigital.com",
