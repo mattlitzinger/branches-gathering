@@ -1,5 +1,5 @@
 module.exports = {
-	title: "Branches",
+	title: "Branches Gathering",
 	url: "https://branchesgathering.com/",
 	language: "en",
 	description: "A gathering of Christian creatives in Southern New Hampshire",
