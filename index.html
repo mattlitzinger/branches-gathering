@@ -33,6 +33,8 @@
 /* Theme colors */
 
 :root {
+	--color-green-10: #F4F7EB;
+	--color-green-20: #CDDAAD;
 	--color-green-50: #6B7358;
 	--color-green-70: #49503C;
 
@@ -503,6 +505,25 @@ textarea {
 }
 button[type="submit"] {
 	margin-top: 0.75rem;
+}
+/* Message Box */
+.message-box {
+	display: block;
+	background-color: var(--color-green-10);
+	color: var(--color-gray-90);
+	margin: 2rem 0;
+	padding: 1rem;
+	border: 1px solid var(--color-green-20);
+	border-radius: 12px;
+}
+.message-box ol {
+	margin-top: 0;
+}
+
+@media (prefers-color-scheme: dark) {
+	.message-box {
+		--color-message-box: #082840;
+	}
 }</style>
 	</head>
 	<body>
@@ -545,7 +566,12 @@ button[type="submit"] {
 
 <p>As Christian creatives, God has given various gifts for us to steward, and has prepared in advance good works for us to do (Ephesians 2:10). What an awesome thought! We'll explore how we can prepare so we're ready to gather when God provides the opportunities.</p>
 
-<p><strong>Registration launches January 6th!</strong></p>
+<p class="text-lg"><strong>Registration launches January 6th!</strong></p>
+
+<div class="message-box">
+	<p>Join us for a house concert featuring <a href="http://www.mattwheeleronline.com/" target="_blank">Matt Wheeler</a> the night before our conference (Friday, February 28th) at Hidden Spring Farm. Doors will open for food and fellowship at 6pm. Music will start at 7pm. We hope to see you there!</p>
+</div>
+
 
 
 <img src="/img/branch.png" alt="Branch illustration" width="80%" />

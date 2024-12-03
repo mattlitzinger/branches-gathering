@@ -7,6 +7,8 @@
 /* Theme colors */
 
 :root {
+	--color-green-10: #F4F7EB;
+	--color-green-20: #CDDAAD;
 	--color-green-50: #6B7358;
 	--color-green-70: #49503C;
 
