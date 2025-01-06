@@ -1,0 +1,25 @@
+---
+layout: layouts/base.njk
+---
+<div class="table-wrapper" tabindex="0" role="group" aria-labelledby="content">
+  <table>
+    <caption>
+      <h1>{{ schedule.year }} Agenda</h1>
+    </caption>
+    <thead>
+      <tr>
+        <th>Time</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for item in schedule.agenda %}
+      <tr>
+        <td>{{ item.time }}</td>
+        <td>{% if item.title %}{{ item.title }}{% endif %}</td>
+      </tr>
+    {% endfor %}
+    <tbody>
+  </table>
+</div>
+
