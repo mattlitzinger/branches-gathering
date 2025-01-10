@@ -564,3 +564,16 @@ button[type="submit"] {
 	margin-top: 0.75rem;
 }
 
+/* Gallery */
+
+.gallery {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-gap: 1rem;
+}
+
+.gallery img {
+	aspect-ratio: 1/1;
+	object-fit: cover;
+}
+

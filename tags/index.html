@@ -589,6 +589,19 @@ textarea {
 button[type="submit"] {
 	margin-top: 0.75rem;
 }
+
+/* Gallery */
+
+.gallery {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-gap: 1rem;
+}
+
+.gallery img {
+	aspect-ratio: 1/1;
+	object-fit: cover;
+}
 /* Message Box */
 .message-box {
 	display: block;
@@ -638,16 +651,7 @@ button[type="submit"] {
 <ul>
 
 	
-	<li><a href="/tags/another-tag/" class="post-tag">another tag</a></li>
-
-	
-	<li><a href="/tags/number-2/" class="post-tag">number 2</a></li>
-
-	
-	<li><a href="/tags/second-tag/" class="post-tag">second tag</a></li>
-
-	
-	<li><a href="/tags/posts-with-two-tags/" class="post-tag">posts with two tags</a></li>
+	<li><a href="/tags/gallery/" class="post-tag">gallery</a></li>
 
 </ul>
 
