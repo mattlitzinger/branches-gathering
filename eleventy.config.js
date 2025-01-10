@@ -38,6 +38,11 @@ module.exports = function(eleventyConfig) {
 	eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
 	eleventyConfig.addPlugin(pluginBundle);
 
+	// Galleries collection
+	eleventyConfig.addCollection("galleries", function (collectionApi) {
+  return collectionApi.getFilteredByTags("gallery");
+});
+
 	// Filters
 	eleventyConfig.addFilter("readableDate", (dateObj, format, zone) => {
 		// Formatting tokens for Luxon: https://moment.github.io/luxon/#/formatting?id=table-of-tokens
