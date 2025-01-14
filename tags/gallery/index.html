@@ -127,6 +127,18 @@ a[href]:focus {
 	font-size: 1.4rem;
 }
 
+.text-left {
+	text-align: left !important;
+}
+
+.text-center {
+	text-align: center !important;
+}
+
+.text-right {
+	text-align: right !important;
+}
+
 .mt-0 {
 	margin-top: 0 !important;
 }
@@ -595,13 +607,33 @@ button[type="submit"] {
 
 .gallery {
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-columns: 1fr 1fr;
 	grid-gap: 1rem;
+}
+
+@media ( min-width: 720px ) {
+	.gallery {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
 }
 
 .gallery img {
 	aspect-ratio: 1/1;
 	object-fit: cover;
+}
+
+/* Presenters */
+
+.presenters-grid {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-gap: 1rem;
+}
+
+@media ( min-width: 720px ) {
+	.presenters-grid {
+		grid-template-columns: 1fr 1fr;
+	}
 }
 /* Message Box */
 .message-box {
@@ -655,7 +687,7 @@ button[type="submit"] {
 
 	<li class="postlist-item">
 		<a href="/gallery/2024/" class="postlist-link">Branches Gathering 2024</a>
-		<time class="postlist-date" datetime="2025-01-10">January 2025</time>
+		<time class="postlist-date" datetime="2025-01-14">January 2025</time>
 	</li>
 
 </ol>
