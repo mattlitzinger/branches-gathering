@@ -1,5 +1,5 @@
 module.exports = {
-	year: "2024",
+	year: "2025",
 	agenda: [
 		{
 			time: "8:00-9:00",  
@@ -22,7 +22,7 @@ module.exports = {
 		  description: ""
 		},
 		{
-			time: "10:15-11:00",  
+			time: "10:20-11:00",  
 		  title: "Breakout Session",
 		  description: ""
 		},
@@ -32,42 +32,37 @@ module.exports = {
 		  description: ""
 		},
 		{
-			time: "11:15-12:00",  
+			time: "11:20-12:00",  
 		  title: "Breakout Session",
 		  description: ""
 		},
 		{
-			time: "12:00-01:00",  
+			time: "12:00-12:45",  
 		  title: "Lunch",
 		  description: ""
 		},
 		{
-			time: "01:00-01:15",  
-		  title: "Worship",
-		  description: ""
+			time: "12:45-01:25",  
+		  title: "Writers In The Round",
+		  description: "Songwriters and poets share their works related to our conference theme."
 		},
 		{
-			time: "01:15-02:00",  
+			time: "01:30-02:45",  
 		  title: "Plenary Session",
 		  description: ""
 		},
 		{
-			time: "02:00-02:15",  
+			time: "02:45-03:00",  
 		  title: "Coffee Break",
 		  description: ""
 		},
 		{
-			time: "02:15-03:00",  
-		  title: "Breakout Session",
-		  description: ""
-		},
-		{
-			time: "03:00-03:30",  
+			time: "03:00-04:00",  
 		  title: "Plenary Session",
 		  description: ""
 		},
 		{
-			time: "03:30-04:00",  
+			time: "04:00-04:30",  
 		  title: "Worship & Closing Remarks",
 		  description: ""
 		}
