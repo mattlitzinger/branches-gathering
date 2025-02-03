@@ -43,12 +43,12 @@ module.exports = {
 		},
 		{
 			time: "12:45-01:25",  
-		  title: "Writers In The Round",
+		  title: "Songwriters & Poets In The Round",
 		  description: "Songwriters and poets share their works related to our conference theme."
 		},
 		{
 			time: "01:30-02:45",  
-		  title: "Plenary Session",
+		  title: "Breakout Session",
 		  description: ""
 		},
 		{
