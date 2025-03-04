@@ -8,5 +8,6 @@ module.exports = {
 		email: "matt@litzdigital.com",
 		url: "https://litzdigital.com/"
 	},
-	registration_url: "https://www.ticketleap.events/tickets/branches/2025-gathering"
+	registration_url: "",
+	subscribe_url: "https://branches.eo.page/subscribe"
 }
