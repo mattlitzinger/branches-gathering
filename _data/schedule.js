@@ -3,7 +3,7 @@ module.exports = {
 	agenda: [
 		{
 			time: "8:00-9:00",  
-		  title: "Arrival & brunch",
+		  title: "Arrival & Brunch",
 		  description: ""
 		},
 		{
@@ -22,47 +22,47 @@ module.exports = {
 		  description: ""
 		},
 		{
-			time: "10:20-11:00",  
+			time: "10:20-11:05",  
 		  title: "Breakout Session",
 		  description: ""
 		},
 		{
-			time: "11:00-11:15",  
+			time: "11:10-11:25",  
 		  title: "Coffee Break",
 		  description: ""
 		},
 		{
-			time: "11:20-12:00",  
+			time: "11:30-12:15",  
 		  title: "Breakout Session",
 		  description: ""
 		},
 		{
-			time: "12:00-12:45",  
+			time: "12:15-1:00",  
 		  title: "Lunch",
 		  description: ""
 		},
 		{
-			time: "12:45-01:25",  
-		  title: "Songwriters & Poets In The Round",
+			time: "1:05-2:00",  
+		  title: "Songwriters & Poets Corner",
 		  description: "Songwriters and poets share their works related to our conference theme."
 		},
 		{
-			time: "01:30-02:45",  
+			time: "2:05-3:20",  
 		  title: "Breakout Session",
 		  description: ""
 		},
 		{
-			time: "02:45-03:00",  
+			time: "3:25-3:40",  
 		  title: "Coffee Break",
 		  description: ""
 		},
 		{
-			time: "03:00-04:00",  
+			time: "3:40-4:00",  
 		  title: "Plenary Session",
 		  description: ""
 		},
 		{
-			time: "04:00-04:30",  
+			time: "4:00-4:30",  
 		  title: "Worship & Closing Remarks",
 		  description: ""
 		}
