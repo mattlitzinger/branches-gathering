@@ -12,8 +12,8 @@ module.exports = [
 		last_name: "Daigle",
 	  title: "Worship Leader",
 	  short_bio: "",
-	  avatar_url: "/img/headshots/headshot_placeholder_male.jpg",
-	  website_url: ""
+	  avatar_url: "/img/headshots/christopher_daigle_headshot.jpg",
+	  website_url: "https://lambjam.co/"
 	},
 	{
 		first_name: "Luke",
