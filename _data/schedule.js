@@ -1,5 +1,5 @@
 module.exports = {
-	year: "2025",
+	year: "2026",
 	agenda: [
 		{
 			time: "8:00-9:00",  
