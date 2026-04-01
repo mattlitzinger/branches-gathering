@@ -6,36 +6,39 @@ eleventyNavigation:
 ---
 <img src="/img/branches-home-hero.jpg" alt="Branches logo with tree branches in the background" />
 
-<h1>Announcing the 3<sup>rd</sup> Annual <strong>Branches Gathering!</strong></h1>
-<p class="text-xl">March 14<sup>th</sup>, 2026 &bull; Hidden Spring Farm, Deerfield, NH</p>
+<div class="hide">
 
-<p class="text-lg">We invite you to join us once again for a gathering of Christian creatives in New England where we will:</p>
+	<h1>Announcing the 3<sup>rd</sup> Annual <strong>Branches Gathering!</strong></h1>
+	<p class="text-xl">March 14<sup>th</sup>, 2026 &bull; Hidden Spring Farm, Deerfield, NH</p>
 
-<ul>
-	<li>Worship our Creator together </li>
-	<li>Have meaningful conversations about what it looks like to be a Christian creative</li>
-	<li>Enjoy breakout sessions in the areas of Visual Art, Music and Writing</li>
-	<li>Eat incredible food</li>
-</ul>
+	<p class="text-lg">We invite you to join us once again for a gathering of Christian creatives in New England where we will:</p>
 
-<p>Our theme for 2026 points us to God as "Our Refining Refuge," who both shields us from the enemy while purifying our faith in Him.</p>
+	<ul>
+		<li>Worship our Creator together </li>
+		<li>Have meaningful conversations about what it looks like to be a Christian creative</li>
+		<li>Enjoy breakout sessions in the areas of Visual Art, Music and Writing</li>
+		<li>Eat incredible food</li>
+	</ul>
 
-<p class="text-lg"><strong>Registration now open!</strong></p>
+	<p>Our theme for 2026 points us to God as "Our Refining Refuge," who both shields us from the enemy while purifying our faith in Him.</p>
 
-<div class="btn-wrapper mb-8">
-	<a class="btn btn-primary" href="{{ metadata.registration_url }}" target="_blank">Register Today!</a>
-	<a class="btn btn-secondary" href="/agenda/">View Schedule</a>
+	<p class="text-lg"><strong>Registration now open!</strong></p>
+
+	<div class="btn-wrapper mb-8">
+		<a class="btn btn-primary" href="{{ metadata.registration_url }}" target="_blank">Register Today!</a>
+		<a class="btn btn-secondary" href="/agenda/">View Schedule</a>
+	</div>
+
+	<p class="hide"><em><strong>A note about the cost increase:</strong> Last year (our very first year) we were so grateful that all of our presenters graciously volunteered their time. This year, along with covering general conference costs, we would like to give a small donation to each of our conference presenters. We trust that you will still find the conference to be a delightful value for the content given.</em></p>
+
+	<img src="/img/branch.png" alt="Branch illustration" width="68%" />
+
+	<div class="message-box">
+		<p>Join us for a house concert featuring <a href="http://www.mattwheeleronline.com/" target="_blank">Matt Wheeler</a> the night before our conference (Friday, March 13th) at Hidden Spring Farm. Doors will open for food and fellowship at 6pm. Music will start at 7pm. We hope to see you there!</p>
+		<p><strong><a href="https://www.eventbrite.com/e/porchlight-presents-matt-wheeler-deerfield-nh-tickets-1979222287140" target="_blank">Reserve Your Spot &rarr;</a></strong></p>
+	</div>
+
 </div>
-
-<p class="hide"><em><strong>A note about the cost increase:</strong> Last year (our very first year) we were so grateful that all of our presenters graciously volunteered their time. This year, along with covering general conference costs, we would like to give a small donation to each of our conference presenters. We trust that you will still find the conference to be a delightful value for the content given.</em></p>
-
-<img src="/img/branch.png" alt="Branch illustration" width="68%" />
-
-<div class="message-box">
-	<p>Join us for a house concert featuring <a href="http://www.mattwheeleronline.com/" target="_blank">Matt Wheeler</a> the night before our conference (Friday, March 13th) at Hidden Spring Farm. Doors will open for food and fellowship at 6pm. Music will start at 7pm. We hope to see you there!</p>
-	<p><strong><a href="https://www.eventbrite.com/e/porchlight-presents-matt-wheeler-deerfield-nh-tickets-1979222287140" target="_blank">Reserve Your Spot &rarr;</a></strong></p>
-</div>
-
 
 <h2>What Is Branches?</h2>
 <p class="text-lg">We are a local group of New England creatives who passionately believe that each person has been made in the image of God, and as part of that image-bearing we are created to create.</p>
@@ -45,7 +48,10 @@ eleventyNavigation:
 <p>A call to remember our Creator as we live out our lives in the  intermediate space between the Garden and the Restoration. As we wrestle with the fallenness of our world (the tensions of joy and sorrow, peace and suffering, being present while we look to the future), we believe that the arts can be a means that God uses to minister to our hearts and give us strength, courage and community.</p>
 
 <div class="btn-wrapper">
-	<!-- <a class="btn btn-primary" href="{{ metadata.registration_url }}" target="_blank">Register Today!</a> -->
-	<a class="btn btn-secondary" href="/agenda/">View Schedule</a>
+	{% if metadata.registration_active %}
+		<a class="btn btn-primary" href="{{ metadata.registration_url }}" target="_blank">Register</a>
+	{%- else %}
+		<a class="btn btn-primary" href="{{ metadata.subscribe_url }}">Subscribe</a>
+	{%- endif %}
 </div>
 
