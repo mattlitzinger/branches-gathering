@@ -9,6 +9,6 @@ module.exports = {
 		url: "https://litzdigital.com/"
 	},
 	registration_active: false,
-	registration_url: "https://www.ticketleap.events/tickets/branches/branches-gathering-2026",
+	registration_url: "https://www.ticketleap.events/tickets/branches/branches-gathering-2027",
 	subscribe_url: "https://branches.eo.page/subscribe"
 }
